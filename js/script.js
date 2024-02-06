@@ -51,15 +51,9 @@ const duplicateSlider = () => {
 
 const showMObileMenu = () => {
 
-	
-	
-	
 	const navVisibility = navList.getAttribute('data-visible')
 	
 	if (navVisibility === 'false') {
-		navItems.forEach(navItem => {
-			navItem.classList.remove('nav__item--active')
-		})
 		navList.setAttribute('data-visible', true)
 		burgerBtn.setAttribute('aria-expended', true)
 		burgerBtn.innerHTML = '<i class="fa-solid fa-xmark nav__icon"></i>'
@@ -73,12 +67,17 @@ const showMObileMenu = () => {
 
 const showMobileLinks = () => {
 	navItems.forEach(navItem => {
-		navItem.classList.toggle('nav__item--active')
+		navItem.classList.add('nav__item--active')
+	})
+}
+const hideMobileLinks = () => {
+	navItems.forEach(navItem => {
+		navItem.classList.remove('nav__item--active')
 	})
 }
 
 const hideNav = () => {
-	showMobileLinks()
+	hideMobileLinks()
 	body.classList.remove('fixed-body')
 	navList.setAttribute('data-visible', false)
 	burgerBtn.setAttribute('aria-expended', false)
