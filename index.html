@@ -7,26 +7,31 @@
     <title>ArchiLAB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&family=Poppins:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&family=Poppins:wght@300;400;700&family=Roboto&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/cd7dceb34f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body aria-hidden="false">
+<body>
 
-    <header id="header" class="header">
-        <div class="nav">
+    <header class="header" id="header">
+        <div class="header__mask"></div>
+        <nav class="nav">
             <div class="wrapper">
+
                 <div class="nav__container">
 
-                    <a href="#" class="nav__logo">archiLAB</a>
-                    <button class="nav__btn"><i class="fa-solid fa-bars nav__icon"></i></button>
+                    <p class="nav__logo">archiLAB</p>
+                    <button aria-expanded="false" aria-controls="navigation-list" class="nav__btn"><i
+                            class="fa-solid fa-bars nav__icon"></i></button>
 
-                    <ul class="nav__list " aria-expanded='false'>
+                    <ul id="navigation-list" data-visible="false" class="nav__list ">
                         <li class="nav__item">
-                            <a href="#" class="nav__link"> O nas</a>
+                            <a href="#aboutus" class="nav__link"> O nas</a>
                         </li>
                         <li class="nav__item"> <a href="#projects" class="nav__link"> Projekty</a></li>
                         <li class="nav__item"> <a href="#press" class="nav__link"> Prasa</a></li>
@@ -36,16 +41,60 @@
 
             </div>
 
-        </div>
+        </nav>
 
-        <div class="header__content wrapper">
 
-            <h1 class="header__title">Lorem, ipsum dolor.</h1>
-            <p class="header__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <div class="wrapper">
+            <div class="header__content ">
 
+                <h1 class="header__title">Projektujemy przestrzeń na miarę Twoich potrzeb.</h1>
+            </div>
         </div>
 
     </header>
+
+    <section class="section wrapper about" id="aboutus">
+        <h2 class="section__title">Nasze biuro</h2>
+
+        <div class="about__container">
+            <div class="about__item about__item--one">
+                <img class="about__img" src="./img/about/brooke-cagle--uHVRvDr7pg-unsplash.jpg" alt="Rozmawiający ludzie">
+            </div>
+            <div class="about__item about__item--two about__item--text">
+                <p class="about__title">Poznaj nas</p>
+                <p class="about__text">Lubimy minimalizm i dobry design. W projektach stawiamy na to co unikalne oraz
+                    ponadczasowe. Tworzymy ludziom przestrzeń do życia, co jest zarówno intrygującym jak i mocno
+                    wymagającym zadaniem. </p>
+            </div>
+            <div class="about__item about__item--three">
+                <img class="about__img" src="./img/about/jason-goodman-bzqU01v-G54-unsplash.jpg" alt="Pracujący ludzie">
+            </div>
+            <div class="about__item about__item--four about__item--text">
+                <p class="about__title">Nasze biuro</p>
+                <p class="about__text"> Projekty nowoczesnych domów i rezydencji realizujemy kompleksowo z myślą o ich
+                    mieszkańcach.
+                    Przy aranżowaniu wnętrz
+                    szukamy pomysłów przewodnich, inspirujemy się też pasją naszych klientów - by projekty nabierały
+                    personalnego i niepowtarzalnego charakteru.
+                </p>
+            </div>
+            <div class="about__item about__item--five">
+                <img class="about__img" src="./img/about/jason-goodman-Oalh2MojUuk-unsplash.jpg" alt="Pracujący ludzie">
+            </div>
+            <div class="about__item about__item--six about__item--text">
+                <p class="about__title">Jak działamy</p>
+                <p class="about__text">
+                    <!-- Domy oraz wnętrza. -->
+                    Naszą specjalnością stały się projekty wnętrz mieszkalnych - aranżacje domów, rezydencji, mieszkań,
+                    apartamentów oraz projekty wnętrz komercyjnych.
+                    Dla nas liczy się intrygujący koncept, któremu nadajemy potem ponadczasową jakość.
+
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="section background"></section>
 
     <section class="section wrapper " id="projects">
         <h2 class="section__title">Projekty</h2>
@@ -58,67 +107,49 @@
         <div class="projects">
 
             <div class="projects__item projects__item--one" id="private">
-                <img src="../img/ConForm-Architects-16.jpeg" alt="" class="projects__img">
-                <div class="projects__content">
-                    <h3 class="projects__title">Lorem, ipsum.</h3>
-                </div>
+                <img src="../img/ConForm-Architects-16.jpeg" alt="Zdjęcie projektu wnętrz" class="projects__img">
+               
             </div>
 
             <div class="projects__item projects__item--two" id="office">
-                <img src="../img/ConForm-Architects-18.jpeg" alt="" class="projects__img">
-                <div class="projects__content">
-                    <h3 class="projects__title">Lorem, ipsum.</h3>
-                </div>
+                <img src="./img/brcar-morony-architecture-a-house-for-grandma-private-houses-archello.1706772802.1992.jpg" alt="Zdjęcie projektu wnętrz" class="projects__img">
+              
             </div>
 
             <div class="projects__item projects__item--three" id="private">
-                <img src="../img/ConForm-Architects-19.jpeg" alt="" class="projects__img">
-                <div class="projects__content">
-                    <h3 class="projects__title">Lorem, ipsum.</h3>
-                </div>
+                <img src="../img/ConForm-Architects-19.jpeg" alt="Zdjęcie projektu wnętrz" class="projects__img">
+               
             </div>
 
             <div class="projects__item projects__item--four" id="office">
-                <img src="../img/ConForm-Architects-2.jpeg" alt="" class="projects__img">
-                <div class="projects__content">
-                    <h3 class="projects__title">Lorem, ipsum.</h3>
-                </div>
+                <img src="./img/brcar-morony-architecture-a-house-for-grandma-private-houses-archello.1706772808.3607.jpg" alt="Zdjęcie projektu wnętrz" class="projects__img">
+                
             </div>
 
             <div class="projects__item projects__item--five" id="private">
-                <img src="../img/ConForm-Architects-5.jpeg" alt="" class="projects__img">
-                <div class="projects__content">
-                    <h3 class="projects__title">Lorem, ipsum.</h3>
-                </div>
+                <img src="../img/ConForm-Architects-5.jpeg" alt="Zdjęcie projektu wnętrz" class="projects__img">
+               
             </div>
 
             <div class="projects__item projects__item--six" id="office">
-                <img src="../img/ConForm-Architects-8.jpeg" alt="" class="projects__img">
-                <div class="projects__content">
-                    <h3 class="projects__title">Lorem, ipsum.</h3>
-                </div>
+                <img src="./img/cuaik-cds-zurbar--n-private-houses-archello.1706689020.5779.jpg" alt="Zdjęcie projektu wnętrz" class="projects__img">
+              
             </div>
 
             <div class="projects__item projects__item--seven" id="private">
-                <img src="../img/ConForm-Architects-16.jpeg" alt="" class="projects__img">
-                <div class="projects__content">
-                    <h3 class="projects__title">Lorem, ipsum.</h3>
-                </div>
+                <img src="./img/cuaik-cds-zurbar--n-private-houses-archello.1706689022.3084.jpg" alt="Zdjęcie projektu wnętrz" class="projects__img">
+               
             </div>
 
 
             <div class="projects__item projects__item--eight" id="office">
-                <img src="../img/ConForm-Architects-18.jpeg" alt="" class="projects__img">
-                <div class="projects__content">
-                    <h3 class="projects__title">Lorem, ipsum.</h3>
-                </div>
+                <img src="../img/ConForm-Architects-18.jpeg" alt="Zdjęcie projektu wnętrz" class="projects__img">
+              
             </div>
 
             <div class="projects__item projects__item--nine" id="private">
-                <img src="../img/ConForm-Architects-16.jpeg" alt="" class="projects__img">
-                <div class="projects__content">
-                    <h3 class="projects__title">Lorem, ipsum.</h3>
-                </div>
+                <img src="./img/fraser-livingstone-architects-simon-square-apartments-archello.1706893786.7408.jpg" alt="Zdjęcie projektu wnętrz" class="projects__img">
+           
             </div>
 
 
@@ -245,7 +276,7 @@
 
         <div class="wrapper">
 
-            <h2 class="section__title"> Skontaktuj się z nami!</h2>
+            <h2 class="section__title"> Kontakt</h2>
             <div class="contact__container">
 
 
@@ -273,17 +304,17 @@
                 <div class="form">
                     <label class="form__label form__label--name" for="name">Podaj imię </label>
                     <input class="form__input" type="text" id="name" placeholder="Imię">
-                    <label class="form__label form__label--surname" for="name">Podaj nazwisko </label>
+                    <label class="form__label form__label--surname" for="surname">Podaj nazwisko </label>
                     <input class="form__input" type="text" id="surname" placeholder="Nazwisko">
                     <label class="form__label form__label--email" for="e-mail">Podaj e-mail</label>
-                    <input class="form__input" type="email" id="email" placeholder="e-mail">
+                    <input class="form__input" type="email" id="e-mail" placeholder="e-mail">
                     <label class="form__label form__label--textarea" for="message">Wpisz treść wiadomości</label>
-                    <textarea class="form__textarea" placeholder="Wiadomość"></textarea>
+                    <textarea class="form__textarea" placeholder="Wiadomość" id="message"></textarea>
 
                     <button class="form__btn">Wyślij wiadomość</button>
                 </div>
 
-                <div class="pop-up " aria-hidden="false">
+                <div class="pop-up" aria-hidden="false">
                     <div class="pop-up__mask"></div>
                     <div class="pop-up__content">
                         <p class="pop-up__text">Wiadomość została pomyślnie wysłana!</p>
@@ -306,7 +337,7 @@
 
                 <ul class="footer__list footer__list--nav">
                     <li class="footer__item">
-                        <a href="#" class="footer__link"> O nas</a>
+                        <a href="#aboutus" class="footer__link"> O nas</a>
                     </li>
                     <li class="footer__item"> <a href="#projects" class="footer__link"> Projekty</a></li>
                     <li class="footer__item"> <a href="#press" class="footer__link"> Prasa</a></li>
@@ -333,7 +364,7 @@
                 </ul>
 
                 <p class="footer__text">
-                    © <span class="footer__span"></span> Loopstudios. All rights reserved.
+                    © <span class="footer__span"></span> archiLAB. All rights reserved.
                 </p>
             </div>
         </div>
